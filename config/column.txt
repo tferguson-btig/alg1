@@ -215,7 +215,7 @@ OrderDataDynamics	oms_pending_hospitalization_id	oms_pending_hospitalization_id	
 OrderDataDynamics	route_order_type	route_order_type	varchar(50)	1	s	1	0	0	
 OrderDataDynamics	settlement_type	settlement_type	varchar(50)	1	s	1	0	0	
 OrderDataDynamics	note	note	varchar(500)	1	*	1	0	0	
-OrderDataDynamics	cond_order_id	cond_order_id	varchar(100)	1	j	1	0	0	
+OrderDataDynamics	cond_order_id	cond_order_id	varchar(100)	1	*	1	0	0	
 OrderDataDynamics	cond_order_qty	cond_order_qty	number(28,14)	1	f	1	0	0	
 OrderDataDynamics	allocate_to_custodian	allocate_to_custodian	varchar(50)	1	s	1	0	0	
 OrderDataDynamics	allocate_to_account	allocate_to_account	varchar(50)	1	s	1	0	0	
