@@ -1,0 +1,85 @@
+tag	name	qtype	utc	bool	note
+Account	account	s	0	0	Account, e.g. MINKBROOK, BTIG_jblair@BTIG.US
+AlgoPhase	phase	s	0	0	Phase1, Phase2, Phase3, Rest, Rest_FullLot, Rest_OddLot, Take, Take_FullLot, Take_OddLot
+AlgoStyle	style	s	0	0	A_10, A_3, A_5, A_6, A_7, A_8, A_10, Aggressive, Moderate, Normal, Opportunistic, Passive, Ultra
+AlgoTags	tags	*	0	0	None TradingUrgency VolatilitySensitivity, TradingUrgency VolatilitySensitivity VolatilitySensitivity, RampUp
+AlgoType	alg	s	0	0	CLOSE,DARK,JACKSNIPE,PARTICIPATE,RAVEN,SMALLCAP,TWAP,VWAP
+COActive	coactive	s	0	1	True/False
+CloseAlgoStyle	closestyle	s	0	0	Moderate, Aggressive, Passive, VeryPassive
+CloseMaxRateInstruction	closemax	f	0	0	
+CloseQuantityInstruction	closeq	j	0	0	
+CloseTargetRateInstruction	closetarget	f	0	0	
+CurveProfileName	curve	s	0	0	SWN[10-15]
+CycleCO	cycleco	s	0	1	True/False
+CycleDA	cycleda	s	0	1	True/False
+DAActive	daflag	s	0	1	True/False
+DGCOrderSize	sizes	*	0	0	String like '500:0.25|600:0.25|750:0.25|1000:0.25' -> 500 600 750 1000 
+DMaxSinglePrice	dmaxsingleprice	f	0	0	Typically 0.5
+DPullBackReduction	dpullback	f	0	0	Typically 0.5
+DTargetPartRate	dtargetpov	f	0	0	
+DerivedLimit	derivedlimit	f	0	0	
+Destination	dest	s	0	0	Destination, e.g. GSECLL ARCA, GSEC SOR, CITADEL SMART
+EventTrigger	trigger	s	0	0	Trigger, e.g. ClientInput, ScheduleStop, TrinityEvent, UnsolicitedCancel, VwapSchedule
+EventType	event	s	0	0	Event, e.g. NewOrder, Cancle, Replace, ParentOrderChange
+ExchangeSymbol	symbol	s	0	0	
+ExecID	fillid	*	0	0	
+ExecutionPrice	fillprice	f	0	0	
+ExecutionQty	fillqty	j	0	0	
+ID	navid	*	0	0	Navigator id, e.g. 'fef5f756-80f7-4b1e-9115-dc5aabf3bbec'
+ISAggressionReduction	reduce	s	0	0	Full, Partial, None
+IsDestinationEdge	edge	s	0	1	True/False
+IsDiversityEnforcementPick	pick	s	0	1	True/False
+IsOTCOrPink	otc	s	0	1	True/False
+IsShortRestricted	restrict	s	0	1	True/False
+MaxParticipationRate	maxpov	f	0	0	
+MinFillQuantity	minfill	f	0	0	
+NDOActive	ndoflag	s	0	1	True/False
+NDODistribution	ndo	f	0	0	
+NbboQuote_AskPrice	ask	f	0	0	
+NbboQuote_AskSize	asksize	j	0	0	
+NbboQuote_BidPrice	bid	f	0	0	
+NbboQuote_BidSize	bidsize	j	0	0	
+OrderID	orderid	*	0	0	
+OrderLimitInterfered	limitflag	s	0	1	True/False
+OrderLimitPrice	limit	f	0	0	
+OrderQuantity	qty	f	0	0	
+OrderQuantityDone	done	f	0	0	
+OrderSubType	subtype	s	0	0	Order subtype, e.g. Rest,Take
+OrderSystemKey	orderkey	s	0	0	e.g. BATS, CITADELALGO, EDGE_ARCA, IEX, NSDQ
+OrderType	ordertype	s	0	0	ClosingAuction,Conditional,DarkAggregator,Discretionary,ForceFinish,IOC,IOCPreRoute,IWould,OpeningAuction,TCross,VWAP,Working
+ParentOrderClosingAuctionQuantity	closeqty	j	0	0	Parent order closing auction quantity
+ParentOrderHasParticipatedInClosingAuction	inclose	s	0	1	True/False
+ParentOrderHasParticipatedInOpeningAuction	inopen	s	0	1	True/False
+ParentOrderID	id	*	0	0	
+ParentOrderIWouldPrice	parentwould	f	0	0	
+ParentOrderLimitPrice	parentlimit	f	0	0	
+ParentOrderOpeningAuctionQuantity	openqty	j	0	0	Parent order opening auction quantity
+ParentOrderParticipateInClosingAuction	closing	s	0	1	True/False
+ParentOrderParticipateInOpeningAuction	opening	s	0	1	True/False
+ParentOrderQuantity	parentqty	f	0	0	
+ParentOrderQuantityDone	parentdone	f	0	0	
+ParentOrderScheduledEnd	end	n	1	0	Scheduled end of parent order, hh:mm:ss:nnnnnnn
+ParentOrderScheduledStart	start	n	1	0	Scheduled start of parent order, hh:mm:ss:nnnnnnn
+Phase3TransitionReason	phase3reason	s	0	0	Early, LateArrival_Liquid, LateArrival_LowVolume, LateArrival_Trend, MidwayPOVSlowdown, PreOpenArrival, ReversionCapture, StretchToClose
+Phase3Type	phase3	s	0	0	Phase 3 type: POV_Partial Moderate_Full POV_Full Moderate_Partial
+RelativeIndex	index	s	0	0	Relative index, e.g. MXUS, PCEF US
+RelativeLimit	rlimit	f	0	0	
+RelativeLimitType	rtype	s	0	0	PNC, ARRIVAL
+RerouteOfOrderID	reroute	*	0	0	
+Route	route	s	0	0	Route, e.g. STRDST, EDGE_BATS, EDGE_NYSE
+RouteMIC	mic	s	0	0	Market identifier code
+ShouldComplete	shouldcomplete	 	0	0	Only in files for Mar 23-28, 2024 for PARTICIPATE
+ShouldCompleteMaxRate	shouldcompletemaxrate	 	0	0	Only in files for Mar 23-28, 2024 for PARTICIPATE
+Side	side	s	0	0	Buy,Sell,Short,Cover
+TargetFillTime	targetfilltime	n	0	0	Null or 00:00:00
+TargetParticipationRate	targetpov	f	0	0	
+TargetRate	targetrate	f	0	0	
+TimeStamp	time	p	1	0	Time in yyyy-mm-dd hh:mm:ss:nnnnnnn format
+TimeToExecute	timetofill	n	0	0	Time in hh:mm:ss:nnnnnnn, e.g. -00:00:00.0136634, 06:03:51.7837801
+TradeDate	date	d	0	0	Format yyyy-mm-dd
+TradingUrgency	tradingurgency	s	0	0	Favorable, Unfavorable, NoTrend
+Urgency	urgency	s	0	0	Level1 Level6 Level5 A_5 Aggressive
+WasCancelPending	pending	s	0	1	True/False
+WasEverShortRestricted	restricted	s	0	1	True/False
+WasEverStockHalted	halted	s	0	1	True/False
+WorkingOrderType	workingtype	s	0	0	AggressiveInside, PassiveMidpoint, Socialite, etc.

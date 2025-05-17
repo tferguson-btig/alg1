@@ -1,0 +1,606 @@
+filetype	column	name	datatype	nulls	qtype	use	bool	utc	note
+AnalyticDataDynamics	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+AnalyticDataDynamics	strategy_name	strategy_name	varchar(50)	1	s	1	0	0	
+AnalyticDataDynamics	strategy_description	strategy_description	varchar(200)	1	s	1	0	0	
+AnalyticDataDynamics	child_count	child_count	number(38,0)	1	j	1	0	0	
+AnalyticDataDynamics	market_session	market_session	varchar(50)	1	s	1	0	0	
+AnalyticDataDynamics	strategy_category	strategy_category	varchar(50)	1	s	1	0	0	
+AnalyticDataDynamics	strategy_purpose	strategy_purpose	varchar(200)	1	s	1	0	0	
+AnalyticDataDynamics	strategy_provider	strategy_provider	varchar(50)	1	s	1	0	0	
+AnalyticDataDynamics	relative_index_arrival_last	relative_index_arrival_last	number(28,14)	1	f	1	0	0	
+AnalyticDataDynamics	relative_index_last	relative_index_last	number(28,14)	1	f	1	0	0	
+AnalyticDataDynamics	relative_index_pnc	relative_index_pnc	number(28,14)	1	f	1	0	0	
+AnalyticDataDynamics	closing_auction_qty	closing_auction_qty	number(10,0)	1	j	1	0	0	
+AnalyticDataDynamics	opening_auction_qty	opening_auction_qty	number(10,0)	1	j	1	0	0	
+AnalyticDataDynamics	ignore_derived_limit	ignore_derived_limit	boolean	1	s	1	1	0	True,False
+AnalyticDataDynamics	is_nav_done	is_nav_done	boolean	1	s	1	1	0	True,False
+AnalyticDataDynamics	nav_start_time_est	nav_start_time_est	time(6)	1	n	1	0	0	
+AnalyticDataDynamics	nav_end_time_est	nav_end_time_est	time(6)	1	n	1	0	0	
+AnalyticDataDynamics	avg_opening_auction_vol	avg_opening_auction_vol	number(10,0)	1	j	1	0	0	
+AnalyticDataDynamics	avg_closing_auction_vol	avg_closing_auction_vol	number(10,0)	1	j	1	0	0	
+AnalyticDataDynamics	etl_ts	etl_ts_analytic	timestamp_ntz(9)	1	p	1	0	1	Column also in order data dynamics
+AnalyticDataDynamics	nav_algo_style	nav_algo_style	varchar(50)	1	s	1	0	0	
+AnalyticLegDataDynamics	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+AnalyticLegDataDynamics	bid_price	bid_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	ask_price	ask_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	last_price	last_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	bid_size	bid_size	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	ask_size	ask_size	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	vwap	vwap	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	is_marketable	is_marketable	boolean	1	s	0	1	0	True,False
+AnalyticLegDataDynamics	leg_id	legid	varchar(100)	0	*	1	0	0	Often '001' for single leg order, or 001,002,.. or fix tag like fb15e6a9-c6-0057
+AnalyticLegDataDynamics	traded_volume	traded_volume	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	traded_notional	traded_notional	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	traded_spread_notional	traded_spread_notional	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	traded_count	traded_count	number(38,0)	1	j	0	0	0	
+AnalyticLegDataDynamics	traded_vwap	traded_vwap	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	marketable_traded_volume	marketable_traded_volume	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	marketable_traded_notional	marketable_traded_notional	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	marketable_traded_spread_notional	marketable_traded_spread_notional	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	marketable_traded_count	marketable_traded_count	number(38,0)	1	j	0	0	0	
+AnalyticLegDataDynamics	marketable_traded_vwap	marketable_traded_vwap	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	last_size	last_size	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	pwp_10	pwp_10	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	pwp_15	pwp_15	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	pwp_20	pwp_20	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	arrival_bid	arrival_bid_dynamic	number(28,14)	1	f	0	0	0	Column also in analytic leg data
+AnalyticLegDataDynamics	arrival_ask	arrival_ask_dynamic	number(28,14)	1	f	0	0	0	Column also in analytic leg data
+AnalyticLegDataDynamics	arrival_last	arrival_last_dynamic	number(28,14)	1	f	0	0	0	Column also in analytic leg data
+AnalyticLegDataDynamics	order_correction	order_correction	varchar(50)	1	s	0	0	0	
+AnalyticLegDataDynamics	todays_opening_price	todays_opening_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	todays_closing_price	todays_closing_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	buyback_10b18_traded_volume	buyback_10b18_traded_volume	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	buyback_10b18_traded_notional	buyback_10b18_traded_notional	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	buyback_10b18_traded_vwap	buyback_10b18_traded_vwap	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	buyback_10b18_traded_count	buyback_10b18_traded_count	number(38,0)	1	j	0	0	0	
+AnalyticLegDataDynamics	implementation_shortfall	implementation_shortfall	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	order_vwap	order_vwap	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	order_vwap_dollar	order_vwap_dollar	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	duration_vwap	duration_vwap	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	duration_vwap_dollar	duration_vwap_dollar	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	vs_previous_close	vs_previous_close	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	spread_capture	spread_capture	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	mean_book_spread_bps	mean_book_spread_bps	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	duration_participation	duration_participation	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	adv_10_participation	adv_10_participation	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	previous_day_participation	previous_day_participation	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	implementation_shortfall_dollar	implementation_shortfall_dollar	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	mean_book_spread_dollar	mean_book_spread_dollar	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	pwp_10_flag	pwp_10_flag	varchar(10)	1	s	0	0	0	True/False
+AnalyticLegDataDynamics	pwp_15_flag	pwp_15_flag	varchar(10)	1	s	0	0	0	True/False
+AnalyticLegDataDynamics	pwp_20_flag	pwp_20_flag	varchar(10)	1	s	0	0	0	True/False
+AnalyticLegDataDynamics	post_5_min_bid_price	post_5_min_bid_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	post_5_min_ask_price	post_5_min_ask_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	post_10_min_bid_price	post_10_min_bid_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	post_10_min_ask_price	post_10_min_ask_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	post_15_min_bid_price	post_15_min_bid_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	post_15_min_ask_price	post_15_min_ask_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	post_20_min_bid_price	post_20_min_bid_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	post_20_min_ask_price	post_20_min_ask_price	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	available_vwap	available_vwap	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	spy_start_bid	spy_start_bid	number(18,6)	1	f	0	0	0	
+AnalyticLegDataDynamics	spy_start_ask	spy_start_ask	number(18,6)	1	f	0	0	0	
+AnalyticLegDataDynamics	spy_end_bid	spy_end_bid	number(18,6)	1	f	0	0	0	
+AnalyticLegDataDynamics	spy_end_ask	spy_end_ask	number(18,6)	1	f	0	0	0	
+AnalyticLegDataDynamics	available_vwap_volume	available_vwap_volume	number(20,0)	1	j	0	0	0	
+AnalyticLegDataDynamics	available_vwap_closing	available_vwap_closing	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	available_vwap_closing_volume	available_vwap_closing_volume	number(20,0)	1	j	0	0	0	
+AnalyticLegDataDynamics	effective_vwap	effective_vwap	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	effective_vwap_volume	effective_vwap_volume	number(20,0)	1	j	0	0	0	
+AnalyticLegDataDynamics	relative_limit_change	relative_limit_change	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	symbol_price_change	symbol_price_change	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	relative_limit_spread	relative_limit_spread	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	relative_limit_in_out	relative_limit_in_out	varchar(5)	1	s	0	0	0	In/Out (?)
+AnalyticLegDataDynamics	derived_limit	derived_limit	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	participation_scope	participation_scope	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	adv30_participation	adv30_participation	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	notional	notional	number(28,6)	1	f	0	0	0	
+AnalyticLegDataDynamics	order_adv_30	order_adv_30	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	nav_mtv_overall	nav_mtv_overall	number(20,0)	1	j	1	0	0	
+AnalyticLegDataDynamics	nav_mtv_current_segment	nav_mtv_current_segment	number(20,0)	1	j	0	0	0	
+AnalyticLegDataDynamics	nav_pov_overall	nav_pov_overall	number(28,14)	1	f	1	0	0	
+AnalyticLegDataDynamics	nav_pov_current_segment	nav_pov_current_segment	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	leaves	leaves	number(28,14)	1	f	1	0	0	
+AnalyticLegDataDynamics	percent_complete	percent_complete	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	closing_auction_order_perc	closing_auction_order_perc	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	relative_limit_spread_eod	relative_limit_spread_eod	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	relative_limit_in_out_eod	relative_limit_in_out_eod	varchar(5)	1	s	0	0	0	In/Out (?)
+AnalyticLegDataDynamics	participation_scope_eod	participation_scope_eod	number(28,14)	1	f	0	0	0	
+AnalyticLegDataDynamics	ssr	ssrflag	varchar(5)	1	s	1	1	0	Yes/No
+AnalyticLegDataDynamics	is_stock_halted	is_stock_halted	boolean	1	s	1	1	0	True,False
+AnalyticLegDataDynamics	symbol_pnc	symbol_pnc	number(18,6)	1	f	1	0	0	
+AnalyticLegDataDynamics	out_of_limit_or_vol_capped	out_of_limit_or_vol_capped	varchar(100)	1	s	0	0	0	
+AnalyticLegDataDynamics	etl_ts	etl_ts_analytic	timestamp_ntz(9)	1	p	0	0	1	Column also exists in order leg data dynamics
+AnalyticLegDataDynamics	security_remaining_intraday_volume	security_remaining_intraday_volume	number(18,0)	1	j	0	0	0	
+OrderLegData	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+OrderLegData	leg_id	legid	varchar(100)	0	*	1	0	0	Often '001' for single leg order, or 001,002,.. or fix tag like fb15e6a9-c6-0057
+OrderLegData	side	side	varchar(50)	1	s	1	0	0	
+OrderLegData	open_close	open_close	varchar(50)	1	s	1	0	0	
+OrderLegData	symbol	symbol	varchar(50)	1	s	1	0	0	
+OrderLegData	symbol_suffix	symbol_suffix	varchar(50)	1	s	1	0	0	
+OrderLegData	symbol_data_ref	symbolref	varchar(50)	1	s	1	0	0	Code made from security type, sedol and country
+OrderLegData	sedol	sedol	varchar(50)	1	s	1	0	0	
+OrderLegData	cusip	cusip	varchar(50)	1	s	1	0	0	
+OrderLegData	isin	isin	varchar(50)	1	s	1	0	0	
+OrderLegData	exchange	exchange	varchar(50)	1	s	1	0	0	
+OrderLegData	option_put_call	pc	varchar(50)	1	s	1	0	0	
+OrderLegData	option_underlying_symbol	underlying	varchar(50)	1	s	1	0	0	
+OrderLegData	option_strike_price	strike	number(28,14)	1	f	1	0	0	
+OrderLegData	option_expiration	expire	timestamp_ntz(9)	1	p	1	0	0	Expiration date (entered as datetime, e.g. "2024-10-18 00:00:00.000000")
+OrderLegData	security_type	sectype	varchar(50)	1	s	1	0	0	
+OrderLegData	equity_type	eqtype	varchar(50)	1	s	1	0	0	Equity type
+OrderLegData	symbol_country	country	varchar(50)	1	s	1	0	0	
+OrderLegData	orig_limit_price	orig_limit_price	number(28,14)	1	f	1	0	0	
+OrderLegData	orig_quantity	orig_quantity	number(28,14)	1	f	1	0	0	
+OrderLegData	tick_size_pilot_group	tick_size_pilot_group	varchar(50)	1	s	0	0	0	Obsolete
+OrderLegData	tick_size_pilot_pricing_precision	tick_size_pilot_pricing_precision	number(28,14)	1	f	0	0	0	Obsolete
+OrderLegData	ric	ric	varchar(50)	1	s	0	0	0	RIC not supplied
+OrderLegData	company_name	name	varchar(120)	1	*	0	0	0	Company name not supplied
+OrderData	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+OrderData	system_root_order_id	system_root_order_id	varchar(100)	0	*	1	0	0	
+OrderData	system_connection	con	varchar(100)	0	s	1	0	0	
+OrderData	system	sys	varchar(100)	0	s	1	0	0	
+OrderData	source_type	source_type	varchar(100)	0	s	1	0	0	
+OrderData	system_connection_type	tier	varchar(50)	0	s	1	0	0	
+OrderData	route	route	varchar(100)	0	s	1	0	0	
+OrderData	route_dark	route_dark	boolean	1	s	1	1	0	True,False
+OrderData	system_route_group	parent	varchar(100)	1	*	1	0	0	
+OrderData	order_date	order_date	timestamp_ntz(9)	0	p	1	0	1	
+OrderData	currency	currency	varchar(50)	1	s	1	0	0	
+OrderData	account	account	varchar(50)	0	s	1	0	0	
+OrderData	sub_account	sub_account	varchar(50)	1	s	1	0	0	
+OrderData	user_id	user_id	varchar(50)	1	s	1	0	0	
+OrderData	basket_id	basket_id	varchar(50)	1	s	1	0	0	
+OrderData	trading_session	trading_session	varchar(50)	1	s	1	0	0	
+OrderData	routing_adapter	routing_adapter	varchar(50)	1	s	1	0	0	
+OrderData	is_directed_order	is_directed_order	boolean	1	s	1	1	0	True,False
+OrderData	is_conditional_order	is_conditional_order	boolean	1	s	1	1	0	True,False
+OrderData	system_key	system_key	varchar(100)	0	s	1	0	0	
+OrderData	thread_name	thread_name	varchar(100)	1	s	1	0	0	
+OrderData	multi_leg_order_type	multi_leg_order_type	varchar(50)	0	s	1	0	0	
+OrderData	prime_custodian	prime_custodian	varchar(50)	1	s	1	0	0	
+OrderData	system_root_route_group	client	varchar(100)	1	*	1	0	0	
+OrderData	oms_depth	oms_depth	number(38,0)	0	j	1	0	0	
+OrderData	is_rerouted	is_rerouted	boolean	1	s	1	1	0	True,False
+OrderData	root_perf_id	root_perf_id	varchar(100)	1	*	1	0	0	
+OrderData	is_drop	is_drop	boolean	1	s	1	1	0	True,False
+OrderData	handl_inst	handl_inst	varchar(100)	1	s	1	0	0	
+OrderData	pairs_id	pairs_id	varchar(150)	1	s	1	0	0	
+OrderData	pairs_deal_type	pairs_deal_type	number(4,0)	1	j	1	0	0	
+OrderData	is_proxy_order	is_proxy_order	boolean	1	s	1	1	0	True,False
+OrderData	algo_info_ab	algo_info_ab	varchar(400)	1	s	1	0	0	
+OrderData	algo_info_route_type	algo_info_route_type	varchar(100)	1	s	1	0	0	
+OrderDataDynamics	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+OrderDataDynamics	oms_latest_order_id	lastamend	varchar(100)	1	*	1	0	0	
+OrderDataDynamics	system_latest_order_id	system_latest_order_id	varchar(100)	0	*	1	0	0	
+OrderDataDynamics	route_order_id	route_order_id	varchar(100)	1	*	1	0	0	
+OrderDataDynamics	discretion	discretion	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	discretion_instr	discretion_instr	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	peg_offset	peg_offset	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	min_participation	min_participation	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	max_participation	max_participation	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	participation_start	participation_start	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	price_trigger	price_trigger	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	cycle_time	cycle_time	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	aggressive_level	aggressive_level	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	stop_price	stop_price	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	order_finished	order_finished	timestamp_ntz(9)	1	p	1	0	1	
+OrderDataDynamics	order_started	order_started	timestamp_ntz(9)	1	p	1	0	1	
+OrderDataDynamics	order_type	order_type	varchar(50)	0	s	1	0	0	
+OrderDataDynamics	exec_instr	exec_instr	varchar(1000)	1	s	1	0	0	
+OrderDataDynamics	show_size	show_size	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	short_locate	short_locate	varchar(100)	1	s	1	0	0	
+OrderDataDynamics	strategy	strategy	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	time_in_force	time_in_force	varchar(50)	0	s	1	0	0	
+OrderDataDynamics	capacity	capacity	varchar(50)	0	s	1	0	0	
+OrderDataDynamics	status	status	varchar(50)	0	s	1	0	0	
+OrderDataDynamics	first_execution	first_execution	timestamp_ntz(9)	1	p	1	0	1	
+OrderDataDynamics	last_execution	last_execution	timestamp_ntz(9)	1	p	1	0	1	
+OrderDataDynamics	is_live	is_live	boolean	0	s	1	1	0	True,False
+OrderDataDynamics	is_filled	is_filled	boolean	0	s	1	1	0	True,False
+OrderDataDynamics	is_canceled	is_canceled	boolean	0	s	1	1	0	True,False
+OrderDataDynamics	is_rejected	is_rejected	boolean	0	s	1	1	0	True,False
+OrderDataDynamics	is_pending	is_pending	boolean	0	s	1	1	0	True,False
+OrderDataDynamics	is_accepted	is_accepted	boolean	0	s	1	1	0	True,False
+OrderDataDynamics	expire_time	expire_time	timestamp_ntz(9)	1	p	1	0	1	
+OrderDataDynamics	effective_time	effective_time	timestamp_ntz(9)	1	p	1	0	1	
+OrderDataDynamics	silent_mode	silent_mode	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	complete	complete	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	auctions	auctions	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	last_amend_time	last_amend_time	timestamp_ntz(9)	1	p	1	0	1	
+OrderDataDynamics	min_fill_quantity	min_fill_quantity	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	hospitalization_status	hospitalization_status	varchar(50)	1	*	1	0	0	
+OrderDataDynamics	net_premium	net_premium	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	oms_pending_hospitalization_id	oms_pending_hospitalization_id	varchar(100)	1	s	1	0	0	
+OrderDataDynamics	route_order_type	route_order_type	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	settlement_type	settlement_type	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	note	note	varchar(500)	1	*	1	0	0	
+OrderDataDynamics	cond_order_id	cond_order_id	varchar(100)	1	j	1	0	0	
+OrderDataDynamics	cond_order_qty	cond_order_qty	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	allocate_to_custodian	allocate_to_custodian	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	allocate_to_account	allocate_to_account	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	cancelled_by	cancelled_by	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	trading_urgency	trading_urgency	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	relative_index	relative_index	varchar(100)	1	s	1	0	0	
+OrderDataDynamics	relative_limit	relative_limit	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	relative_limit_type	relative_limit_type	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	fut_sett_date	fut_sett_date	date	1	d	1	0	0	
+OrderDataDynamics	close_target_rate	close_target_rate	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	close_max_rate	close_max_rate	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	close_quantity_explicit	close_quantity_explicit	number(20,0)	1	j	1	0	0	
+OrderDataDynamics	ex_destination	ex_destination	varchar(100)	1	s	1	0	0	
+OrderDataDynamics	curve_profile	curve_profile	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	etl_ts	etl_ts_order	timestamp_ntz(9)	1	p	1	0	1	Timestamp also in analytic data dynamics
+OrderDataDynamics	price_trigger_route_type	price_trigger_route_type	varchar(10)	1	s	1	0	0	
+OrderDataDynamics	price_trigger_commit_percent	price_trigger_commit_percent	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	closing_auction_target_rate	closing_auction_target_rate	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	closing_auction_quantity	closing_auction_quantity	number(38,0)	1	j	1	0	0	
+OrderDataDynamics	rel_limit	rel_limit	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	rel_limit_type	rel_limit_type	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	rel_limit_index	rel_limit_index	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	end_time_by_rate	end_time_by_rate	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	scaled_target_rate	scaled_target_rate	number(28,14)	1	f	1	0	0	
+OrderDataDynamics	custom_instr	custom_instr	varchar(100)	1	s	1	0	0	
+OrderDataDynamics	schedule_tilt	schedule_tilt	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	pre_market	pre_market	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	rule_10b18	rule_10b18	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	dynamic_pull_back	dynamic_pull_back	varchar(50)	1	s	1	0	0	
+OrderDataDynamics	no_sdp	no_sdp	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	no_principal	no_principal	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	no_tcross	no_tcross	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	no_exchanges	no_exchanges	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	venue_black_list	venue_black_list	varchar(400)	1	s	1	0	0	
+OrderDataDynamics	show_ht	show_ht	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	instr_ht	instr_ht	varchar(100)	1	s	1	0	0	
+OrderDataDynamics	must_complete	must_complete	boolean	1	s	1	1	0	True,False
+OrderDataDynamics	algo_style	algo_style	varchar(50)	1	s	1	0	0	
+OrderLegDataDynamics	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+OrderLegDataDynamics	leg_id	legid	varchar(100)	0	*	1	0	0	Often '001' for single leg order, or 001,002,.. or fix tag like fb15e6a9-c6-0057
+OrderLegDataDynamics	quantity	quantity	number(28,14)	0	f	1	0	0	
+OrderLegDataDynamics	ratio	ratio	number(18,6)	1	f	1	0	0	
+OrderLegDataDynamics	limit_price	limit_price	number(28,14)	1	f	1	0	0	
+OrderLegDataDynamics	quantity_done	quantity_done	number(28,14)	1	f	1	0	0	
+OrderLegDataDynamics	average_price	average_price	number(28,14)	1	f	1	0	0	
+OrderLegDataDynamics	notional_done	notional_done	number(28,14)	1	f	0	0	0	
+OrderLegDataDynamics	execs_at_dark_venues	execs_at_dark_venues	number(28,14)	1	f	1	0	0	
+OrderLegDataDynamics	execs_at_midpoint	execs_at_midpoint	number(28,14)	1	f	1	0	0	
+OrderLegDataDynamics	first_execution	first_execution	timestamp_ntz(9)	1	p	0	0	1	
+OrderLegDataDynamics	first_execution_price	first_execution_price	number(28,14)	1	f	0	0	0	
+OrderLegDataDynamics	last_execution	last_execution	timestamp_ntz(9)	1	p	0	0	1	
+OrderLegDataDynamics	last_execution_price	last_execution_price	number(28,14)	1	f	0	0	0	
+OrderLegDataDynamics	pairs_spread	pairs_spread	number(28,14)	1	f	1	0	0	
+OrderLegDataDynamics	pairs_order_type	pairs_order_type	number(4,0)	1	j	1	0	0	
+OrderLegDataDynamics	pairs_cash	pairs_cash	number(28,14)	1	f	1	0	0	
+OrderLegDataDynamics	pairs_ratio	pairs_ratio	number(28,14)	1	f	1	0	0	
+OrderLegDataDynamics	pairs_benchmark	pairs_benchmark	number(10,0)	1	j	1	0	0	
+OrderLegDataDynamics	pairs_execstyle	pairs_execstyle	number(4,0)	1	j	1	0	0	
+OrderLegDataDynamics	pairs_custom_benchmark	pairs_custom_benchmark	number(28,14)	1	f	1	0	0	
+OrderLegDataDynamics	etl_ts	etl_ts_order	timestamp_ntz(9)	1	p	1	0	1	Column also exists in analytic leg data dynamics
+AnalyticData	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+AnalyticData	route_description	route_description	varchar(100)	1	s	1	0	0	
+AnalyticData	route_type	route_type	varchar(50)	1	s	1	0	0	
+AnalyticData	account_name	account_name	varchar(100)	1	s	1	0	0	
+AnalyticData	trading_group	trading_group	varchar(50)	1	s	1	0	0	
+AnalyticData	firm	firm	varchar(50)	1	s	1	0	0	
+AnalyticData	firm_finra_member	firm_finra_member	boolean	1	s	1	1	0	True,False
+AnalyticData	firm_mpid	firm_mpid	varchar(50)	1	s	1	0	0	
+AnalyticData	broker_mpid	broker_mpid	varchar(50)	1	s	1	0	0	
+AnalyticData	route_mpid	route_mpid	varchar(50)	1	s	1	0	0	
+AnalyticData	route_oats_code	route_oats_code	varchar(50)	1	s	1	0	0	
+AnalyticData	support_coverage	support_coverage	varchar(40)	1	s	1	0	0	
+AnalyticData	firm_foreign_broker	firm_foreign_broker	boolean	1	s	1	1	0	True,False
+AnalyticData	route_mic	route_mic	varchar(60)	1	s	1	0	0	
+AnalyticLegData	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+AnalyticLegData	arrival_bid	arrival_bid	number(28,14)	1	f	0	0	0	
+AnalyticLegData	arrival_ask	arrival_ask	number(28,14)	1	f	0	0	0	
+AnalyticLegData	arrival_last	arrival_last	number(28,14)	1	f	0	0	0	
+AnalyticLegData	arrival_vwap	arrival_vwap	number(28,14)	1	f	0	0	0	
+AnalyticLegData	leg_id	legid	varchar(100)	1	*	1	0	0	Often '001' for single leg order, or 001,002,.. or fix tag like fb15e6a9-c6-0057
+AnalyticLegData	ric	ric	varchar(30)	1	s	1	0	0	
+AnalyticLegData	company_name	name	varchar(120)	1	*	1	0	0	Company name
+AnalyticLegData	adv_10_day	adv_10_day	number(28,14)	1	f	0	0	0	
+AnalyticLegData	adv_30_day	adv_30_day	number(28,14)	1	f	0	0	0	
+OrderHistory	event_order	seq	number(38,0)	0	j	1	0	0	
+OrderHistory	oms_order_id	amend	varchar(100)	0	*	1	0	0	
+OrderHistory	oms_prev_order_id	previous	varchar(100)	1	*	1	0	0	
+OrderHistory	oms_latest_order_id	lastamend	varchar(100)	1	*	1	0	0	
+OrderHistory	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+OrderHistory	system_order_id	system_order_id	varchar(100)	0	*	1	0	0	
+OrderHistory	system_latest_order_id	system_latest_order_id	varchar(100)	1	*	1	0	0	
+OrderHistory	change_type	event	varchar(50)	0	s	1	0	0	
+OrderHistory	confirm_type	confirm	varchar(50)	1	s	1	0	0	
+OrderHistory	execution_leg_id	execution_leg_id	varchar(100)	1	*	1	0	0	
+OrderHistory	oms_exec_id	fill	varchar(100)	1	*	1	0	0	
+OrderHistory	oms_change_id	change	varchar(100)	0	*	1	0	0	
+OrderHistory	system_exec_id	system_exec_id	varchar(100)	1	*	1	0	0	
+OrderHistory	route_order_id	route_order_id	varchar(100)	1	*	1	0	0	
+OrderHistory	event_date	event_date	timestamp_ntz(9)	0	p	1	0	1	
+OrderHistory	discretion	discretion	number(28,14)	1	f	1	0	0	
+OrderHistory	discretion_instr	discretion_instr	varchar(50)	1	s	1	0	0	
+OrderHistory	peg_offset	peg_offset	number(28,14)	1	f	1	0	0	
+OrderHistory	min_fill_quantity	min_fill_quantity	number(28,14)	1	f	1	0	0	
+OrderHistory	min_participation	min_participation	number(28,14)	1	f	1	0	0	
+OrderHistory	max_participation	max_participation	number(28,14)	1	f	1	0	0	
+OrderHistory	participation_start	participation_start	number(28,14)	1	f	1	0	0	
+OrderHistory	price_trigger	price_trigger	number(28,14)	1	f	1	0	0	
+OrderHistory	cycle_time	cycle_time	number(28,14)	1	f	1	0	0	
+OrderHistory	aggressive_level	aggressive_level	varchar(50)	1	s	1	0	0	
+OrderHistory	stop_price	stop_price	number(28,14)	1	f	1	0	0	
+OrderHistory	order_finished	order_finished	timestamp_ntz(9)	1	p	1	0	1	
+OrderHistory	order_started	order_started	timestamp_ntz(9)	1	p	1	0	1	
+OrderHistory	order_type	order_type	varchar(50)	0	s	1	0	0	
+OrderHistory	execution_quantity	execution_quantity	number(28,14)	1	f	1	0	0	
+OrderHistory	execution_price	execution_price	number(28,14)	1	f	1	0	0	
+OrderHistory	exec_instr	exec_instr	varchar(1000)	1	s	1	0	0	
+OrderHistory	show_size	show_size	number(28,14)	1	f	1	0	0	
+OrderHistory	short_locate	short_locate	varchar(100)	1	s	1	0	0	
+OrderHistory	custom_strategy	custom_strategy	varchar(100)	1	s	1	0	0	
+OrderHistory	strategy	strategy	varchar(50)	1	s	1	0	0	
+OrderHistory	thread_name	thread_name	varchar(100)	1	s	1	0	0	
+OrderHistory	time_in_force	time_in_force	varchar(50)	0	s	1	0	0	
+OrderHistory	capacity	capacity	varchar(50)	0	s	1	0	0	
+OrderHistory	status	status	varchar(50)	0	s	1	0	0	
+OrderHistory	first_execution	first_execution	timestamp_ntz(9)	1	p	1	0	1	
+OrderHistory	last_execution	last_execution	timestamp_ntz(9)	1	p	1	0	1	
+OrderHistory	notional_done	notional_done	number(28,14)	1	f	1	0	0	
+OrderHistory	execs_at_dark_venues	execs_at_dark_venues	number(28,14)	1	f	1	0	0	
+OrderHistory	execs_at_midpoint	execs_at_midpoint	number(28,14)	1	f	1	0	0	
+OrderHistory	is_live	is_live	boolean	0	s	1	1	0	True,False
+OrderHistory	filled	filled	boolean	0	s	1	1	0	True,False
+OrderHistory	canceled	canceled	boolean	0	s	1	1	0	True,False
+OrderHistory	rejected	rejected	boolean	0	s	1	1	0	True,False
+OrderHistory	is_pending	is_pending	boolean	0	s	1	1	0	True,False
+OrderHistory	is_accepted	is_accepted	boolean	0	s	1	1	0	True,False
+OrderHistory	expire_time	expire_time	timestamp_ntz(9)	1	p	1	0	1	
+OrderHistory	effective_time	effective_time	timestamp_ntz(9)	1	p	1	0	1	
+OrderHistory	complete	complete	boolean	1	s	1	1	0	True,False
+OrderHistory	silent_mode	silent_mode	boolean	1	s	1	1	0	True,False
+OrderHistory	auctions	auctions	varchar(50)	1	s	1	0	0	
+OrderHistory	last_amend_time	last_amend_time	timestamp_ntz(9)	1	p	1	0	1	
+OrderHistory	received_time	received_time	timestamp_ntz(9)	0	p	1	0	1	
+OrderHistory	system_prev_order_id	system_prev_order_id	varchar(100)	1	*	1	0	0	
+OrderHistory	system_event_group	amendparent	varchar(100)	1	*	1	0	0	
+OrderHistory	sent_time	sent_time	timestamp_ntz(9)	1	p	1	0	1	
+OrderHistory	note	note	varchar(500)	1	*	1	0	0	
+OrderHistory	net_premium	net_premium	number(28,14)	1	f	1	0	0	
+OrderHistory	multi_leg_order_type	multi_leg_order_type	varchar(50)	0	s	1	0	0	
+OrderHistory	hospitalization_modifier	hospitalization_modifier	varchar(100)	1	s	1	0	0	
+OrderHistory	system_root_event_group	amendclient	varchar(100)	1	*	1	0	0	
+OrderHistory	route_order_type	route_order_type	varchar(50)	1	s	1	0	0	
+OrderHistory	is_rerouted	is_rerouted	boolean	1	s	1	1	0	True,False
+OrderHistory	perf_id	perf_id	varchar(100)	1	*	1	0	0	
+OrderHistory	settlement_type	settlement_type	varchar(50)	1	s	1	0	0	
+OrderHistory	oms_time	oms_time	timestamp_ntz(9)	0	p	1	0	1	
+OrderHistory	account	account	varchar(50)	1	s	1	0	0	
+OrderHistory	allocate_to_custodian	allocate_to_custodian	varchar(50)	1	s	1	0	0	
+OrderHistory	allocate_to_account	allocate_to_account	varchar(50)	1	s	1	0	0	
+OrderHistory	oms_index	oms_index	number(38,0)	1	j	1	0	0	
+OrderHistory	trading_urgency	trading_urgency	varchar(50)	1	s	1	0	0	
+OrderHistory	relative_index	relative_index	varchar(100)	1	s	1	0	0	
+OrderHistory	relative_limit	relative_limit	number(28,14)	1	f	1	0	0	
+OrderHistory	relative_limit_type	relative_limit_type	varchar(50)	1	s	1	0	0	
+OrderHistory	fix_sending_time	fix_sending_time	timestamp_ntz(9)	1	p	1	0	1	
+OrderHistory	cust_fields	cust_fields	varchar(1000)	1	*	1	0	0	
+OrderHistory	fut_sett_date	fut_sett_date	date	1	d	1	0	0	
+OrderHistory	ex_destination	ex_destination	varchar(100)	1	s	1	0	0	
+OrderHistory	curve_profile	curve_profile	varchar(50)	1	s	1	0	0	
+OrderHistory	pairs_id	pairs_id	varchar(150)	1	s	1	0	0	
+OrderHistory	pairs_deal_type	pairs_deal_type	number(4,0)	1	j	1	0	0	
+OrderHistory	price_trigger_route_type	price_trigger_route_type	varchar(10)	1	s	1	0	0	
+OrderHistory	price_trigger_commit_percent	price_trigger_commit_percent	number(28,14)	1	f	1	0	0	
+OrderHistory	closing_auction_target_rate	closing_auction_target_rate	number(28,14)	1	f	1	0	0	
+OrderHistory	closing_auction_quantity	closing_auction_quantity	number(38,0)	1	j	1	0	0	
+OrderHistory	rel_limit	rel_limit	number(28,14)	1	f	1	0	0	
+OrderHistory	rel_limit_type	rel_limit_type	varchar(50)	1	s	1	0	0	
+OrderHistory	rel_limit_index	rel_limit_index	varchar(50)	1	s	1	0	0	
+OrderHistory	end_time_by_rate	end_time_by_rate	number(28,14)	1	f	1	0	0	
+OrderHistory	scaled_target_rate	scaled_target_rate	number(28,14)	1	f	1	0	0	
+OrderHistory	custom_instr	custom_instr	varchar(100)	1	s	1	0	0	
+OrderHistory	schedule_tilt	schedule_tilt	varchar(50)	1	s	1	0	0	
+OrderHistory	pre_market	pre_market	boolean	1	s	1	1	0	True,False
+OrderHistory	rule_10b18	rule_10b18	boolean	1	s	1	1	0	True,False
+OrderHistory	dynamic_pull_back	dynamic_pull_back	varchar(50)	1	s	1	0	0	
+OrderHistory	no_sdp	no_sdp	boolean	1	s	1	1	0	True,False
+OrderHistory	no_principal	no_principal	boolean	1	s	1	1	0	True,False
+OrderHistory	no_tcross	no_tcross	boolean	1	s	1	1	0	True,False
+OrderHistory	no_exchanges	no_exchanges	boolean	1	s	1	1	0	True,False
+OrderHistory	venue_black_list	venue_black_list	varchar(400)	1	s	1	0	0	
+OrderHistory	show_ht	show_ht	boolean	1	s	1	1	0	True,False
+OrderHistory	instr_ht	instr_ht	varchar(100)	1	s	1	0	0	
+OrderHistory	must_complete	must_complete	boolean	1	s	1	1	0	True,False
+OrderHistory	algo_style	algo_style	varchar(50)	1	s	1	0	0	
+OrderLegHistory	oms_order_id	amend	varchar(100)	0	*	1	0	0	
+OrderLegHistory	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+OrderLegHistory	oms_change_id	change	varchar(100)	0	*	1	0	0	
+OrderLegHistory	leg_id	legid	varchar(100)	0	*	1	0	0	Often '001' for single leg order, or 001,002,.. or fix tag like fb15e6a9-c6-0057
+OrderLegHistory	average_price	average_price	number(28,14)	0	f	1	0	0	
+OrderLegHistory	quantity_done	quantity_done	number(28,14)	0	f	1	0	0	
+OrderLegHistory	security_type	sectype	varchar(50)	0	s	1	0	0	
+OrderLegHistory	equity_type	eqtype	varchar(50)	1	s	1	0	0	Equity type
+OrderLegHistory	symbol	symbol	varchar(50)	1	s	1	0	0	
+OrderLegHistory	symbol_suffix	symbol_suffix	varchar(20)	1	s	1	0	0	
+OrderLegHistory	symbol_country	country	varchar(20)	1	s	1	0	0	
+OrderLegHistory	symbol_data_ref	symbolref	varchar(50)	1	s	1	0	0	Code made from security type, sedol and country
+OrderLegHistory	sedol	sedol	varchar(20)	1	s	1	0	0	
+OrderLegHistory	cusip	cusip	varchar(20)	1	s	1	0	0	
+OrderLegHistory	isin	isin	varchar(20)	1	s	1	0	0	
+OrderLegHistory	exchange	exchange	varchar(20)	1	s	1	0	0	
+OrderLegHistory	open_close	open_close	varchar(20)	1	s	1	0	0	
+OrderLegHistory	put_call	pc	varchar(20)	1	s	1	0	0	
+OrderLegHistory	underlying_symbol	underlying	varchar(50)	1	s	1	0	0	
+OrderLegHistory	strike_price	strike	number(28,14)	1	f	1	0	0	
+OrderLegHistory	expiration	expire	timestamp_ntz(9)	1	p	1	0	0	Expiration date (entered as datetime, e.g. "2024-10-18 00:00:00.000000")
+OrderLegHistory	side	side	varchar(20)	0	s	1	0	0	
+OrderLegHistory	quantity	quantity	number(28,14)	0	f	1	0	0	
+OrderLegHistory	limit_price	limit_price	number(28,14)	1	f	1	0	0	
+OrderLegHistory	leaves	leaves	number(28,14)	0	f	1	0	0	
+OrderLegHistory	notional_done	notional_done	number(28,14)	0	f	1	0	0	
+OrderLegHistory	ric	ric	varchar(50)	1	s	1	0	0	
+OrderLegHistory	ratio	ratio	number(18,6)	1	f	1	0	0	
+OrderLegHistory	pairs_spread	pairs_spread	number(28,14)	1	f	1	0	0	
+OrderLegHistory	pairs_order_type	pairs_order_type	number(4,0)	1	j	1	0	0	
+OrderLegHistory	pairs_cash	pairs_cash	number(28,14)	1	f	1	0	0	
+OrderLegHistory	pairs_ratio	pairs_ratio	number(28,14)	1	f	1	0	0	
+OrderLegHistory	pairs_benchmark	pairs_benchmark	number(10,0)	1	j	1	0	0	
+OrderLegHistory	pairs_execstyle	pairs_execstyle	number(4,0)	1	j	1	0	0	
+OrderLegHistory	pairs_custom_benchmark	pairs_custom_benchmark	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	oms_root_order_id	id	varchar(100)	1	*	1	0	0	
+AnalyticStrategyHistory	leg_id	legid	varchar(100)	1	*	1	0	0	Often '001' for single leg order, or 001,002,.. or fix tag like fb15e6a9-c6-0057
+AnalyticStrategyHistory	event_order	seq	number(38,0)	1	j	1	0	0	
+AnalyticStrategyHistory	strategy	strategy	varchar(50)	1	s	1	0	0	
+AnalyticStrategyHistory	strategy_name	strategy_name	varchar(50)	1	s	1	0	0	
+AnalyticStrategyHistory	auctions	auctions	varchar(50)	1	s	1	0	0	
+AnalyticStrategyHistory	time_in_force	time_in_force	varchar(50)	1	s	1	0	0	
+AnalyticStrategyHistory	market_session	market_session	varchar(50)	1	s	1	0	0	
+AnalyticStrategyHistory	order_started	order_started	timestamp_ntz(9)	1	p	1	0	1	
+AnalyticStrategyHistory	order_finished	order_finished	timestamp_ntz(9)	1	p	1	0	1	
+AnalyticStrategyHistory	order_correction	order_correction	varchar(50)	1	s	1	0	0	
+AnalyticStrategyHistory	quantity	quantity	number(10,0)	1	j	1	0	0	
+AnalyticStrategyHistory	quantity_done	quantity_done	number(10,0)	1	j	1	0	0	
+AnalyticStrategyHistory	quantity_doneat_start	quantity_doneat_start	number(10,0)	1	j	1	0	0	
+AnalyticStrategyHistory	average_price	average_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	limit_price	limit_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	first_execution	first_execution	timestamp_ntz(9)	1	p	1	0	1	
+AnalyticStrategyHistory	last_execution	last_execution	timestamp_ntz(9)	1	p	1	0	1	
+AnalyticStrategyHistory	last_execution_price	last_execution_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	arrival_bid	arrival_bid	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	arrival_ask	arrival_ask	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	bid_price	bid_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	ask_price	ask_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	traded_volume	traded_volume	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	traded_notional	traded_notional	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	traded_spread_notional	traded_spread_notional	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	traded_count	traded_count	number(10,0)	1	j	1	0	0	
+AnalyticStrategyHistory	traded_vwap	traded_vwap	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	marketable_traded_volume	marketable_traded_volume	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	marketable_traded_notional	marketable_traded_notional	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	marketable_traded_spread_notional	marketable_traded_spread_notional	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	marketable_traded_count	marketable_traded_count	number(10,0)	1	j	1	0	0	
+AnalyticStrategyHistory	marketable_traded_vwap	marketable_traded_vwap	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	pwp_10	pwp_10	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	pwp_15	pwp_15	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	pwp_20	pwp_20	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	pwp_10_flag	pwp_10_flag	varchar(10)	1	s	1	0	0	True/False
+AnalyticStrategyHistory	pwp_15_flag	pwp_15_flag	varchar(10)	1	s	1	0	0	True/False
+AnalyticStrategyHistory	pwp_20_flag	pwp_20_flag	varchar(10)	1	s	1	0	0	True/False
+AnalyticStrategyHistory	duration_vwap	duration_vwap	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	duration_vwap_dollar	duration_vwap_dollar	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	spread_capture	spread_capture	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	mean_book_spread_bps	mean_book_spread_bps	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	mean_book_spread_dollar	mean_book_spread_dollar	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	post_5_min_bid_price	post_5_min_bid_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	post_5_min_ask_price	post_5_min_ask_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	post_10_min_bid_price	post_10_min_bid_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	post_10_min_ask_price	post_10_min_ask_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	post_15_min_bid_price	post_15_min_bid_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	post_15_min_ask_price	post_15_min_ask_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	post_20_min_bid_price	post_20_min_bid_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	post_20_min_ask_price	post_20_min_ask_price	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	available_vwap	available_vwap	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	min_fill_quantity	min_fill_quantity	number(10,0)	1	j	1	0	0	
+AnalyticStrategyHistory	min_participation	min_participation	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	max_participation	max_participation	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	price_trigger	price_trigger	number(28,14)	1	f	1	0	0	
+AnalyticStrategyHistory	aggressive_level	aggressive_level	varchar(20)	1	s	1	0	0	
+AnalyticStrategyHistory	etl_ts	etl_ts	timestamp_ntz(9)	1	p	1	0	1	
+ExecutionData	leg_id	legid	varchar(100)	0	*	1	0	0	Often '001' for single leg order, or 001,002,.. or fix tag like fb15e6a9-c6-0057
+ExecutionData	oms_order_id	amend	varchar(100)	0	*	1	0	0	
+ExecutionData	oms_root_order_id	id	varchar(100)	0	*	1	0	0	
+ExecutionData	system_order_id	system_order_id	varchar(100)	1	*	1	0	0	
+ExecutionData	oms_exec_id	fill	varchar(100)	0	*	1	0	0	
+ExecutionData	oms_change_id	change	varchar(100)	0	*	1	0	0	
+ExecutionData	system_route_group	parent	varchar(100)	1	*	1	0	0	
+ExecutionData	execution_route	execution_route	varchar(50)	1	s	1	0	0	
+ExecutionData	route	route	varchar(50)	1	s	1	0	0	
+ExecutionData	route_type	route_type	varchar(50)	1	s	1	0	0	
+ExecutionData	route_final	route_final	varchar(50)	1	s	1	0	0	
+ExecutionData	system_connection_type	tier	varchar(50)	1	s	1	0	0	
+ExecutionData	system_exec_id	system_exec_id	varchar(100)	1	*	1	0	0	
+ExecutionData	quantity	quantity	number(28,14)	1	f	1	0	0	
+ExecutionData	price	price	number(28,14)	1	f	1	0	0	
+ExecutionData	exec_date	exec_date	timestamp_ntz(9)	1	p	1	0	1	
+ExecutionData	security_type	sectype	varchar(50)	1	s	1	0	0	
+ExecutionData	side	side	varchar(50)	1	s	1	0	0	
+ExecutionData	symbol	symbol	varchar(50)	1	s	1	0	0	
+ExecutionData	cusip	cusip	varchar(50)	1	s	1	0	0	
+ExecutionData	sedol	sedol	varchar(50)	1	s	1	0	0	
+ExecutionData	isin	isin	varchar(50)	1	s	1	0	0	
+ExecutionData	exchange	exchange	varchar(50)	1	s	1	0	0	
+ExecutionData	put_call	pc	varchar(50)	1	s	1	0	0	
+ExecutionData	open_close	open_close	varchar(50)	1	s	1	0	0	
+ExecutionData	underlying_symbol	underlying	varchar(50)	1	s	1	0	0	
+ExecutionData	strike_price	strike	number(28,14)	1	f	1	0	0	
+ExecutionData	expiration	expire	timestamp_ntz(9)	1	p	1	0	0	Expiration date (entered as datetime, e.g. "2024-10-18 00:00:00.000000")
+ExecutionData	liquidity_code	liquidity_code	varchar(50)	1	s	1	0	0	
+ExecutionData	commission	commission	number(28,14)	1	f	1	0	0	
+ExecutionData	commission_type	commission_type	varchar(50)	1	s	1	0	0	
+ExecutionData	symbol_country	country	varchar(50)	1	s	1	0	0	
+ExecutionData	account	account	varchar(50)	1	s	1	0	0	
+ExecutionData	sub_account	sub_account	varchar(50)	1	s	1	0	0	
+ExecutionData	route_mic_code	route_mic_code	varchar(50)	1	s	1	0	0	
+ExecutionData	route_bic_code	route_bic_code	varchar(50)	1	s	1	0	0	
+ExecutionData	symbol_primary_venue	primary	varchar(50)	1	s	1	0	0	
+ExecutionData	route_gsi_code	route_gsi_code	varchar(100)	1	s	1	0	0	
+ExecutionData	route_order_id	route_order_id	varchar(100)	1	*	1	0	0	
+ExecutionData	symbol_suffix	symbol_suffix	varchar(50)	1	s	1	0	0	
+ExecutionData	last_strategy	last_strategy	varchar(100)	1	s	1	0	0	
+ExecutionData	received_time	received_time	timestamp_ntz(9)	1	p	1	0	1	
+ExecutionData	is_dark_execution	is_dark_execution	boolean	1	s	0	1	0	No values supplied
+ExecutionData	is_midpoint_execution	is_midpoint_execution	boolean	1	s	0	1	0	No values supplied
+ExecutionData	quote_bid	quote_bid	number(28,14)	1	f	1	0	0	
+ExecutionData	quote_ask	quote_ask	number(28,14)	1	f	1	0	0	
+ExecutionData	system_child_report_order_id	childamend	varchar(100)	1	*	1	0	0	
+ExecutionData	system_child_report_exec_id	child	varchar(100)	1	*	1	0	0	
+ExecutionData	system_leaf_report_order_id	leafamend	varchar(100)	1	*	1	0	0	
+ExecutionData	system_leaf_report_exec_id	leaf	varchar(100)	1	*	1	0	0	
+ExecutionData	perf_id	perf_id	varchar(100)	1	*	1	0	0	
+ExecutionData	executing_broker	executing_broker	varchar(100)	1	s	1	0	0	
+ExecutionData	symbol_data_ref	symbolref	varchar(50)	1	s	1	0	0	Code made from security type, sedol and country
+ExecutionData	quote_bid_size	quote_bid_size	number(38,0)	1	j	1	0	0	
+ExecutionData	quote_ask_size	quote_ask_size	number(38,0)	1	j	1	0	0	
+ExecutionData	execution_route_description	execution_route_description	varchar(200)	1	s	1	0	0	
+ExecutionData	oms_index	oms_index	number(38,0)	1	j	1	0	0	
+ExecutionData	ric	ric	varchar(50)	1	s	1	0	0	
+ExecutionData	firm	firm	varchar(20)	1	s	1	0	0	
+ExecutionData	settlementcurrency	settlementcurrency	varchar(50)	1	s	1	0	0	
+ExecutionData	settlementfxrate	settlementfxrate	number(28,14)	1	f	1	0	0	
+ExecutionData	settlementnotional	settlementnotional	number(38,14)	1	f	1	0	0	
+ExecutionData	settlementfxconversionmethod	settlementfxconversionmethod	varchar(50)	1	s	1	0	0	
+ExecutionData	last_broker_capacity	last_broker_capacity	varchar(50)	1	s	1	0	0	
+ExecutionDataDynamics	oms_order_id	amend	varchar(100)	0	*	1	0	0	
+ExecutionDataDynamics	oms_exec_id	fill	varchar(100)	0	*	1	0	0	
+ExecutionDataDynamics	bid_price	bid_price	number(28,14)	1	f	1	0	0	
+ExecutionDataDynamics	ask_price	ask_price	number(28,14)	1	f	1	0	0	
+ExecutionDataDynamics	bid_size	bid_size	number(38,0)	1	j	1	0	0	
+ExecutionDataDynamics	ask_size	ask_size	number(38,0)	1	j	1	0	0	
+ExecutionDataDynamics	execution_type	execution_type	varchar(50)	1	s	1	0	0	
+ExecutionDataDynamics	execution_time	execution_time	timestamp_ntz(9)	1	p	1	0	1	
+ExecutionDataDynamics	exchange_mic	exchange_mic	varchar(60)	1	s	1	0	0	
+ExecutionDataDynamics	venue_type	venue_type	varchar(20)	1	s	1	0	0	
+ExecutionDataDynamics	execution_correction	execution_correction	varchar(500)	1	s	1	0	0	
+ExecutionDataDynamics	tape_tick_ids	tape_tick_ids	varchar(16777216)	1	*	1	0	0	
+ExecutionDataDynamics	pre_1_sec_bid	pre_1_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	pre_1_sec_ask	pre_1_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	pre_5_sec_bid	pre_5_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	pre_5_sec_ask	pre_5_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	pre_15_sec_bid	pre_15_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	pre_15_sec_ask	pre_15_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	pre_30_sec_bid	pre_30_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	pre_30_sec_ask	pre_30_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	pre_60_sec_bid	pre_60_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	pre_60_sec_ask	pre_60_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_1_sec_bid	post_1_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_1_sec_ask	post_1_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_5_sec_bid	post_5_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_5_sec_ask	post_5_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_15_sec_bid	post_15_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_15_sec_ask	post_15_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_30_sec_bid	post_30_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_30_sec_ask	post_30_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_60_sec_bid	post_60_sec_bid	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	post_60_sec_ask	post_60_sec_ask	number(18,6)	1	f	1	0	0	
+ExecutionDataDynamics	ecn_vendor	ecn_vendor	varchar(100)	1	s	1	0	0	
+ExecutionDataDynamics	ecn_charge_name	ecn_charge_name	varchar(100)	1	s	1	0	0	
+ExecutionDataDynamics	ecn_liq_event	ecn_liq_event	varchar(100)	1	s	1	0	0	
+ExecutionDataDynamics	ecn_charge	ecn_charge	number(28,14)	1	f	1	0	0	
+ExecutionDataDynamics	etl_ts	etl_ts	timestamp_ntz(9)	1	p	1	0	1	

@@ -1,0 +1,56 @@
+tag	name	qtype	note
+edge_id	edge	s	ARCA, BATS, BATY, EDGX, NASDAQ, NYSE
+timestamp	time	p	UTC time
+event_type	event	s	Cancel, Execution, JumpMid, NewOrder, Pullback, Replace, Snipe
+event_trigger	trigger	s	AggressiveTransition, Execution, FeedTrade, NavigatorRequest, OrderExpiration, QuoteResponse
+was_cancel_pending	cancel	s	True/False
+parent_order_id	id	*	OMS root order id
+order_id	order	*	Matches system order id in history
+child_order_id	child	*	Matches system-style id strings in history (?)
+child_order_execid	fill	*	Matches system exec id in history
+order_type	ordertype	s	15, Aggressive[1-3], IOC, Passive[0-3], PatientPassive[0-2], PulledBack
+child_order_type	childtype	s	IOC, Limit, MidpointPeg
+child_order_quantity	childqty	j	
+child_order_limit_price	childlimit	f	
+child_order_execution_quantity	fillqty	j	
+child_order_execution_price	fillprice	f	
+bboquote_bid_price	bid	f	
+bboquote_ask_price	ask	f	
+bboquote_last_price	lastprice	f	
+bboquote_bid_size	bidsize	j	
+bboquote_ask_size	asksize	j	
+bboquote_last_size	lastsize	j	
+bboquote_last_tradesign	lastsign	c	
+nbboquote_bid_price	bestbid	f	
+nbboquote_ask_price	bestask	f	
+nbboquote_last_price	bestprice	f	
+nbboquote_bid_size	bestbidsize	j	
+nbboquote_ask_size	bestasksize	j	
+nbboquote_last_size	bestsize	j	
+nbboquote_last_tradesign	bestsign	c	
+short_term_alpha	alpha	f	Short term alpha
+previous_quote_type	prevtype	s	None
+previous_quote_bid_price	prevbid	f	
+previous_quote_ask_price	prevask	f	
+previous_quote_last_price	prevprice	f	
+previous_quote_bid_size	prevbidsize	j	
+previous_quote_ask_size	prevasksize	j	
+previous_quote_last_size	prevsize	j	
+previous_quote_last_tradesign	prevsign	c	
+alphasniping	sniping	f	
+alphapullback	pullback	f	
+lastsalesign	lastsalesign	h	
+lastquotechangesign	lastquotesign	h	
+quotesizeassymetry	asymmetry	f	Quote size asymmetry
+alpha_sniping_buy	snipingbuy	f	Alpha sniping buy
+alpha_sniping_sell	snipingsell	f	Alpha sniping sell
+alpha_pullback_buy	pullbackbuy	f	Alpha pullback buy
+alpha_pullback_sell	pullbacksell	f	Alpha pullback sell
+alpha_inside_buy	insidebuy	f	Alpha inside buy
+alpha_inside_sell	insidesell	f	Alpha inside sell
+alpha_mid_buy	midbuy	f	
+alpha_mid_sell	midsell	f	
+original_child_order_id	origid	*	
+sta_state	state	s	JumpMid, None, Pullback, Snipe
+edge_proposed_child_order_limit_price	edgelimit	f	
+navigator_child_limit_price	navlimit	f	

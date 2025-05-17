@@ -1,0 +1,5 @@
+table	col
+order	id
+fill	fill
+leg	id
+leg	legid

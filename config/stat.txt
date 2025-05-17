@@ -1,0 +1,3 @@
+table	dir	filemask
+edge	QuantData	EdgeStatistics_????-??-??*.csv
+nav	QuantData_New	NavStatistics_NY?_*.csv

@@ -1,0 +1,283 @@
+filetype	tag	column	name	qtype	datatype	nulls	note
+Orders	TradeDate	date_key	date_key	d	date	1	
+Orders	Timestamp	ts	ts	p	timestamp_ntz(6)	1	
+Orders	OmsRootOrderID	oms_root_order_id	oms_root_order_id	*	varchar(100)	1	
+Orders	SystemRootOrderID	system_root_order_id	system_root_order_id	*	varchar(100)	1	
+Orders	SystemConnection	system_connection	system_connection	s	varchar(100)	1	
+Orders	System	system	system_group	s	varchar(100)	1	
+Orders	SystemKey	system_key	system_key	s	varchar(100)	1	
+Orders	SystemConnectionType	system_connection_type	system_connection_type	s	varchar(100)	1	Client, Internal, Market
+Orders	SourceType	source_type	source_type	s	varchar(100)	1	CMPL, FCLT, FIX, OVERFILL, TSP
+Orders	Route	route	route	s	varchar(100)	1	
+Orders	RouteDark	route_dark	route_dark	s	boolean	1	True/False
+Orders	SystemRouteGroup	system_route_group	system_route_group	*	varchar(100)	1	
+Orders	ThreadName	thread_name	thread_name	*	varchar(100)	1	
+Orders	RoutingAdapter	routing_adapter	routing_adapter	s	varchar(100)	1	
+Orders	IsDirectedOrder	is_directed_order	is_directed_order	s	boolean	1	True/False
+Orders	IsConditionalOrder	is_conditional_order	is_conditional_order	s	boolean	1	True/False
+Orders	Account	account	account	s	varchar(100)	1	
+Orders	SubAccount	sub_account	sub_account	s	varchar(100)	1	
+Orders	UserID	user_id	user_id	s	varchar(100)	1	
+Orders	BasketID	basket_id	basket_id	s	varchar(100)	1	(no values)
+Orders	TradingSession	trading_session	trading_session	h	varchar(100)	1	1-5, 7
+Orders	OrderDate	order_date	order_date	p	timestamp_ntz(6)	1	
+Orders	Currency	currency	currency	s	varchar(50)	1	
+Orders	MultiLegOrderType	multi_leg_order_type	multi_leg_order_type	s	varchar(100)	1	BuyWrite, OptionSpread, SingleLegged
+Orders	PrimeCustodian	prime_custodian	prime_custodian	s	varchar(100)	1	
+Orders	OmsDepth	oms_depth	oms_depth	j	number(38,0)	1	
+Orders	SystemRootRouteGroup	system_root_route_group	system_root_route_group	*	varchar(100)	1	
+Orders	IsRerouted	is_rerouted	is_rerouted	s	boolean	1	True/False
+Orders	RootPerfID	root_perf_id	root_perf_id	*	varchar(100)	1	
+Orders	IsDrop	is_drop	is_drop	s	boolean	1	True/False
+Orders	IsProxyOrder	is_proxy_order	is_proxy_order	s	boolean	1	True/False
+Orders	HandlInst	handl_inst	handl_inst	s	varchar(200)	1	AutomatedPrivate, AutomatedPublic, Manual
+Orders	PairsID	pairs_id	pairs_id	*	varchar(200)	1	id string, e.g. e3061b91-112-000j or 515DF1_165, only for pairs
+Orders	PairsDealType	pairs_deal_type	pairs_deal_type	j	number(38,0)	1	
+Orders	OmsLatestOrderID	oms_latest_order_id	oms_latest_order_id	*	varchar(100)	1	
+Orders	SystemLatestOrderID	system_latest_order_id	system_latest_order_id	*	varchar(100)	1	
+Orders	RouteOrderID	route_order_id	route_order_id	*	varchar(100)	1	
+Orders	Discretion	discretion	discretion	f	number(28,14)	1	
+Orders	DiscretionInstr	discretion_instr	discretion_instr	s	varchar(100)	1	DisplayedPrice
+Orders	PegOffset	peg_offset	peg_offset	f	number(28,14)	1	
+Orders	MinFillQuantity	min_fill_quantity	min_fill_quantity	f	number(28,14)	1	
+Orders	MinParticipation	min_participation	min_participation	f	number(28,14)	1	
+Orders	MaxParticipation	max_participation	max_participation	f	number(28,14)	1	
+Orders	ParticipationStart	participation_start	participation_start	f	number(28,14)	1	
+Orders	Complete	complete	complete	s	boolean	1	True/False
+Orders	SilentMode	silent_mode	silent_mode	s	boolean	1	True/False
+Orders	Auctions	auctions	auctions	s	varchar(100)	1	All, Close, Open, None
+Orders	PriceTrigger	price_trigger	price_trigger	f	number(28,14)	1	
+Orders	CycleTime	cycle_time	cycle_time	f	number(28,14)	1	
+Orders	AggressiveLevel	aggressive_level	aggressive_level	s	varchar(100)	1	
+Orders	StopPrice	stop_price	stop_price	f	number(28,14)	1	
+Orders	OrderType	order_type	order_type	s	varchar(100)	1	Order type, e.g. Market, Limit, Pegged
+Orders	ExecInstr	exec_instr	exec_instr	*	varchar(1000)	1	Execution instructions, one or more of key words, e.g. MarketPeg, MidPricePeg, Strictlimit
+Orders	ShowSize	show_size	show_size	f	number(28,14)	1	
+Orders	ShortLocate	short_locate	short_locate	*	varchar(100)	1	
+Orders	Strategy	strategy	strategy	s	varchar(100)	1	
+Orders	TimeInForce	time_in_force	time_in_force	s	varchar(50)	1	
+Orders	Capacity	capacity	capacity	s	varchar(50)	1	Agency, Principal
+Orders	ExpireTime	expire_time	expire_time	p	timestamp_ntz(6)	1	
+Orders	EffectiveTime	effective_time	effective_time	p	timestamp_ntz(6)	1	
+Orders	OrderFinished	order_finished	order_finished	p	timestamp_ntz(6)	1	
+Orders	OrderStarted	order_started	order_started	p	timestamp_ntz(6)	1	
+Orders	Status	status	status	s	varchar(50)	1	Status, e.g. New, Filled, Cancelled
+Orders	IsLive	is_live	is_live	s	boolean	1	True/False
+Orders	IsFilled	is_filled	is_filled	s	boolean	1	True/False
+Orders	IsCanceled	is_canceled	is_canceled	s	boolean	1	True/False
+Orders	IsRejected	is_rejected	is_rejected	s	boolean	1	True/False
+Orders	IsPending	is_pending	is_pending	s	boolean	1	True/False
+Orders	IsAccepted	is_accepted	is_accepted	s	boolean	1	True/False
+Orders	LegFirstExecution	overall_first_execution	overall_first_execution	p	timestamp_ntz(6)	1	
+Orders	LegLastExecution	overall_last_execution	overall_last_execution	p	timestamp_ntz(6)	1	
+Orders	LastAmendTime	last_amend_time	last_amend_time	p	timestamp_ntz(6)	1	
+Orders	HospitalizationStatus	hospitalization_status	hospitalization_status	s	varchar(100)	1	Hospitalized
+Orders	NetPremium	net_premium	net_premium	f	number(28,14)	1	
+Orders	OmsPendingHospitalizationID	oms_pending_hospitalization_id	oms_pending_hospitalization_id	*	varchar(100)	1	
+Orders	RouteOrderType	route_order_type	route_order_type	s	varchar(50)	1	e.g. IBKR PP, STRDST
+Orders	SettlementType	settlement_type	settlement_type	s	varchar(50)	1	T0,T1,T3 or blank(99%)
+Orders	Note	note	note	*	varchar(500)	1	
+Orders	CondOrderID	cond_order_id	cond_order_id	*	varchar(100)	1	
+Orders	CondOrderQty	cond_order_qty	cond_order_qty	j	number(38,0)	1	
+Orders	AllocateToCustodian	allocate_to_custodian	allocate_to_custodian	s	varchar(50)	1	BCS,BNP,GS,JP,ML,MS,SB,SCM,UBS or blank(99%)
+Orders	AllocateToAccount	allocate_to_account	allocate_to_account	s	varchar(50)	1	
+Orders	CancelledBy	cancelled_by	cancelled_by	s	varchar(50)	1	Broker, Client
+Orders	TradingUrgency	trading_urgency	trading_urgency	s	varchar(100)	1	Favorable, NoTrend, Unfavorable
+Orders	RelativeIndex	relative_index	relative_index	s	varchar(100)	1	
+Orders	RelativeLimit	relative_limit	relative_limit	f	number(28,14)	1	
+Orders	RelativeLimitType	relative_limit_type	relative_limit_type	s	varchar(100)	1	ARRIVAL, PNC
+Orders	FutSettDate	fut_sett_date	fut_sett_date	d	date	1	
+Orders	CloseTargetRate	close_target_rate	close_target_rate	f	number(28,14)	1	
+Orders	CloseMaxRate	close_max_rate	close_max_rate	f	number(28,14)	1	
+Orders	CloseQuantityExplicit	close_quantity_explicit	close_quantity_explicit	j	number(38,0)	1	
+Orders	ExDestination	ex_destination	ex_destination	s	varchar(100)	1	
+Orders	CurveProfile	curve_profile	curve_profile	s	varchar(100)	1	SWN10, SWN11, SWN12, SWN13, SWN14, SWN15
+Orders	RouteDescription	route_description	route_description	s	varchar(100)	1	
+Orders	RouteType	route_type	route_type	s	varchar(50)	1	Broker, Exchange, Internal
+Orders	AccountName	account_name	account_name	*	varchar(100)	1	
+Orders	TradingGroup	trading_group	trading_group	h	varchar(50)	1	Numeric, 1-37
+Orders	Firm	firm	firm	s	varchar(50)	1	
+Orders	FirmFinraMember	firm_finra_member	firm_finra_member	s	boolean	1	True/False
+Orders	FirmMpid	firm_mpid	firm_mpid	s	varchar(50)	1	
+Orders	BrokerMpid	broker_mpid	broker_mpid	s	varchar(50)	1	
+Orders	RouteMpid	route_mpid	route_mpid	s	varchar(50)	1	
+Orders	RouteOatsCode	route_oats_code	route_oats_code	s	varchar(50)	1	M,XJ,XK,XP,XQ,XU,XV,XY,XZ
+Orders	SupportCoverage	support_coverage	support_coverage	s	varchar(50)	1	
+Orders	FirmForeignBroker	firm_foreign_broker	firm_foreign_broker	s	boolean	1	True/False
+Orders	RouteMIC	route_mic	route_mic	s	varchar(50)	1	
+Orders	StrategyName	strategy_name	strategy_name	s	varchar(100)	1	
+Orders	StrategyDescription	strategy_description	strategy_description	*	varchar(200)	1	
+Orders	ChildCount	child_count	child_count	j	number(38,0)	1	
+Orders	StrategyProvider	strategy_provider	strategy_provider	s	varchar(100)	1	
+Orders	MarketSession	market_session	market_session	s	varchar(50)	1	
+Orders	StrategyCategory	strategy_category	strategy_category	s	varchar(100)	1	
+Orders	StrategyPurpose	strategy_purpose	strategy_purpose	*	varchar(200)	1	Collection of tags, e.g. 'DMA, Immediate' or 'Dark, LongRunning'
+Orders	RelativeIndexArrivalLast	relative_index_arrival_last	relative_index_arrival_last	f	number(28,14)	1	
+Orders	RelativeIndexLast	relative_index_last	relative_index_last	f	number(28,14)	1	
+Orders	RelativeIndexPNC	relative_index_pnc	relative_index_pnc	f	number(28,14)	1	
+Orders	OpeningAuctionQty	opening_auction_qty	opening_auction_qty	f	number(18,2)	1	Possible float with 2 decimals?
+Orders	ClosingAuctionQty	closing_auction_qty	closing_auction_qty	f	number(18,2)	1	Possible float with 2 decimals?
+Orders	IgnoreDerivedLimit	ignore_derived_limit	ignore_derived_limit	s	boolean	1	True/False
+Orders	IsNavDone	is_nav_done	is_nav_done	s	boolean	1	True/False
+Orders	NavStartTimeEST	nav_start_time_est	nav_start_time_est	n	time(6)	1	
+Orders	NavEndTimeEST	nav_end_time_est	nav_end_time_est	n	time(6)	1	
+Orders	AvgOpeningAuctionVol	avg_opening_auction_vol	avg_opening_auction_vol	f	number(18,2)	1	Possible float with 2 decimals?
+Orders	AvgClosingAuctionVol	avg_closing_auction_vol	avg_closing_auction_vol	f	number(18,2)	1	Possible float with 2 decimals?
+Orders	LegID	leg_id	leg_id	*	varchar(50)	1	
+Orders	Side	side	side	s	varchar(50)	1	Buy, Cover, Sell, Short
+Orders	OpenClose	open_close	open_close	s	varchar(50)	1	
+Orders	Symbol	symbol	symbol	s	varchar(50)	1	
+Orders	SymbolSuffix	symbol_suffix	symbol_suffix	s	varchar(50)	1	
+Orders	SymbolDataRef	symbol_data_ref	symbol_data_ref	*	varchar(50)	1	
+Orders	Sedol	sedol	sedol	s	varchar(50)	1	
+Orders	Cusip	cusip	cusip	s	varchar(50)	1	
+Orders	Isin	isin	isin	s	varchar(50)	1	
+Orders	Exchange	exchange	exchange	s	varchar(50)	1	
+Orders	OptionPutCall	option_put_call	option_put_call	s	varchar(50)	1	
+Orders	OptionUnderlyingSymbol	option_underlying_symbol	option_underlying_symbol	s	varchar(50)	1	
+Orders	OptionStrikePrice	option_strike_price	option_strike_price	f	number(28,14)	1	
+Orders	OptionExpiration	option_expiration	option_expiration	p	date	1	Option expiration, e.g. 2024-11-15 00:00:00.000000
+Orders	SecurityType	security_type	security_type	s	varchar(50)	1	
+Orders	EquityType	equity_type	equity_type	s	varchar(50)	1	
+Orders	SymbolCountry	symbol_country	symbol_country	s	varchar(10)	1	
+Orders	OrigLimitPrice	orig_limit_price	orig_limit_price	f	number(28,14)	1	
+Orders	OrigQuantity	orig_quantity	orig_quantity	f	number(18,2)	1	Possible float with 2 decimals?
+Orders	TickSizePilotGroup	tick_size_pilot_group	tick_size_pilot_group	*	varchar(50)	1	(no values supplied)
+Orders	TickSizePilotPricingPrecision	tick_size_pilot_pricing_precision	tick_size_pilot_pricing_precision	f	number(28,14)	1	
+Orders	Quantity	quantity	quantity	f	number(18,2)	1	Possible float with 2 decimals?
+Orders	Ratio	ratio	ratio	f	number(18,6)	1	
+Orders	LimitPrice	limit_price	limit_price	f	number(18,6)	1	
+Orders	QuantityDone	quantity_done	quantity_done	f	number(18,2)	1	Possible float with 2 decimals?
+Orders	AveragePrice	average_price	average_price	f	number(28,14)	1	
+Orders	NotionalDone	notional_done	notional_done	f	number(28,6)	1	
+Orders	FirstExecution	first_execution	first_execution	p	timestamp_ntz(6)	1	
+Orders	LegFirstExecutionPrice	first_execution_price	first_execution_price	f	number(18,6)	1	
+Orders	LastExecution	last_execution	last_execution	p	timestamp_ntz(6)	1	
+Orders	LegLastExecutionPrice	last_execution_price	last_execution_price	f	number(18,6)	1	
+Orders	PairsSpread	pairs_spread	pairs_spread	f	number(28,14)	1	
+Orders	PairsOrderType	pairs_order_type	pairs_order_type	j	number(38,0)	1	
+Orders	PairsCash	pairs_cash	pairs_cash	f	number(18,6)	1	
+Orders	PairsRatio	pairs_ratio	pairs_ratio	f	number(18,6)	1	
+Orders	PairsBenchmark	pairs_benchmark	pairs_benchmark	j	number(38,0)	1	
+Orders	PairsExecStyle	pairs_exec_style	pairs_exec_style	j	number(38,0)	1	
+Orders	PairsCustomBenchmark	pairs_custom_benchmark	pairs_custom_benchmark	f	number(28,14)	1	
+Orders	ArrivalVwap	arrival_vwap	arrival_vwap	f	number(28,14)	1	
+Orders	Ric	ric	ric	s	varchar(30)	1	
+Orders	CompanyName	company_name	company_name	*	varchar(200)	1	
+Orders	ADV10Day	adv_10_day	adv_10_day	f	number(28,14)	1	
+Orders	ADV30Day	adv_30_day	adv_30_day	f	number(28,14)	1	
+Orders	BidPrice	bid_price	bid_price	f	number(18,6)	1	
+Orders	AskPrice	ask_price	ask_price	f	number(18,6)	1	
+Orders	LastPrice	last_price	last_price	f	number(18,6)	1	
+Orders	BidSize	bid_size	bid_size	j	number(38,0)	1	
+Orders	AskSize	ask_size	ask_size	j	number(38,0)	1	
+Orders	LastSize	last_size	last_size	j	number(38,0)	1	
+Orders	Vwap	vwap	vwap	f	number(28,14)	1	
+Orders	IsMarketable	is_marketable	is_marketable	s	boolean	1	True/False
+Orders	TradedVolume	traded_volume	traded_volume	j	number(38,0)	1	
+Orders	TradedNotional	traded_notional	traded_notional	f	number(28,6)	1	
+Orders	TradedSpreadNotional	traded_spread_notional	traded_spread_notional	f	number(28,14)	1	
+Orders	TradedCount	traded_count	traded_count	j	number(38,0)	1	
+Orders	TradedVwap	traded_vwap	traded_vwap	f	number(28,14)	1	
+Orders	MarketableTradedVolume	marketable_traded_volume	marketable_traded_volume	j	number(38,0)	1	
+Orders	MarketableTradedNotional	marketable_traded_notional	marketable_traded_notional	f	number(28,6)	1	
+Orders	MarketableTradedSpreadNotional	marketable_traded_spread_notional	marketable_traded_spread_notional	f	number(28,14)	1	
+Orders	MarketableTradedCount	marketable_traded_count	marketable_traded_count	j	number(38,0)	1	
+Orders	MarketableTradedVwap	marketable_traded_vwap	marketable_traded_vwap	f	number(28,14)	1	
+Orders	Pwp10	pwp_10	pwp_10	f	number(28,14)	1	
+Orders	Pwp10Flag	pwp_10_flag	pwp_10_flag	s	varchar(10)	1	False or blank
+Orders	Pwp15	pwp_15	pwp_15	f	number(28,14)	1	
+Orders	Pwp15Flag	pwp_15_flag	pwp_15_flag	s	varchar(10)	1	False or blank
+Orders	Pwp20	pwp_20	pwp_20	f	number(28,14)	1	
+Orders	Pwp20Flag	pwp_20_flag	pwp_20_flag	s	varchar(10)	1	False or blank
+Orders	ArrivalBid	arrival_bid	arrival_bid	f	number(18,6)	1	
+Orders	ArrivalAsk	arrival_ask	arrival_ask	f	number(18,6)	1	
+Orders	ArrivalLast	arrival_last	arrival_last	f	number(18,6)	1	
+Orders	OrderCorrection	order_correction	order_correction	*	varchar(50)	1	(no values supplied)
+Orders	TodaysOpeningPrice	todays_opening_price	todays_opening_price	f	number(18,6)	1	
+Orders	TodaysClosingPrice	todays_closing_price	todays_closing_price	f	number(18,6)	1	
+Orders	Buyback10b18TradedVolume	buyback_10b18_traded_volume	buyback_10b18_traded_volume	j	number(38,0)	1	
+Orders	Buyback10b18TradedNotional	buyback_10b18_traded_notional	buyback_10b18_traded_notional	f	number(28,6)	1	
+Orders	Buyback10b18TradedVwap	buyback_10b18_traded_vwap	buyback_10b18_traded_vwap	f	number(28,14)	1	
+Orders	Buyback10b18TradedCount	buyback_10b18_traded_count	buyback_10b18_traded_count	j	number(38,0)	1	
+Orders	ImplementationShortfall	implementation_shortfall	implementation_shortfall	f	number(28,14)	1	
+Orders	ImplementationShortfallDollar	implementation_shortfall_dollar	implementation_shortfall_dollar	f	number(28,14)	1	
+Orders	OrderVwap	order_vwap	order_vwap	f	number(28,14)	1	
+Orders	OrderVwapDollar	order_vwap_dollar	order_vwap_dollar	f	varchar(50)	1	
+Orders	DurationVwap	duration_vwap	duration_vwap	f	number(28,14)	1	
+Orders	DurationVwapDollar	duration_vwap_dollar	duration_vwap_dollar	f	number(28,14)	1	
+Orders	VsPreviousClose	vs_previous_close	vs_previous_close	f	number(28,14)	1	
+Orders	SpreadCapture	spread_capture	spread_capture	f	number(28,14)	1	
+Orders	MeanBookSpreadBps	mean_book_spread_bps	mean_book_spread_bps	f	number(28,14)	1	
+Orders	MeanBookSpreadDollar	mean_book_spread_dollar	mean_book_spread_dollar	f	number(28,14)	1	
+Orders	DurationParticipation	duration_participation	duration_participation	f	number(28,14)	1	
+Orders	ADV10Participation	adv_10_participation	adv_10_participation	f	number(28,14)	1	
+Orders	ADV30Participation	adv_30_participation	adv_30_participation	f	number(28,14)	1	
+Orders	PreviousDayParticipation	previous_day_participation	previous_day_participation	f	number(28,14)	1	
+Orders	Post5MinBidPrice	post_5_min_bid_price	post_5_min_bid_price	f	number(18,6)	1	
+Orders	Post5MinAskPrice	post_5_min_ask_price	post_5_min_ask_price	f	number(18,6)	1	
+Orders	Post10MinBidPrice	post_10_min_bid_price	post_10_min_bid_price	f	number(18,6)	1	
+Orders	Post10MinAskPrice	post_10_min_ask_price	post_10_min_ask_price	f	number(18,6)	1	
+Orders	Post15MinBidPrice	post_15_min_bid_price	post_15_min_bid_price	f	number(18,6)	1	
+Orders	Post15MinAskPrice	post_15_min_ask_price	post_15_min_ask_price	f	number(18,6)	1	
+Orders	Post20MinBidPrice	post_20_min_bid_price	post_20_min_bid_price	f	number(18,6)	1	
+Orders	Post20MinAskPrice	post_20_min_ask_price	post_20_min_ask_price	f	number(18,6)	1	
+Orders	AvailableVWAP	available_vwap	available_vwap	f	number(28,14)	1	
+Orders	AvailableVWAPVolume	available_vwap_volume	available_vwap_volume	j	number(38,0)	1	
+Orders	AvailableVWAPClosing	available_vwap_closing	available_vwap_closing	f	number(28,14)	1	
+Orders	AvailableVWAPClosingVolume	available_vwap_closing_volume	available_vwap_closing_volume	j	number(38,0)	1	
+Orders	SPYStartBid	spy_start_bid	spy_start_bid	f	number(18,6)	1	
+Orders	SPYStartAsk	spy_start_ask	spy_start_ask	f	number(18,6)	1	
+Orders	SPYEndBid	spy_end_bid	spy_end_bid	f	number(18,6)	1	
+Orders	SPYEndAsk	spy_end_ask	spy_end_ask	f	number(18,6)	1	
+Orders	EffectiveVWAP	effective_vwap	effective_vwap	f	number(28,14)	1	
+Orders	EffectiveVWAPVolume	effective_vwap_volume	effective_vwap_volume	j	number(38,0)	1	
+Orders	DerivedLimit	derived_limit	derived_limit	f	number(18,6)	1	
+Orders	RelativeLimitChange	relative_limit_change	relative_limit_change	f	number(28,14)	1	
+Orders	SymbolPriceChange	symbol_price_change	symbol_price_change	f	number(18,6)	1	
+Orders	RelativeLimitSpread	relative_limit_spread	relative_limit_spread	f	number(28,14)	1	
+Orders	RelativeLimitInOut	relative_limit_in_out	relative_limit_in_out	s	varchar(20)	1	IN/OUT when defined, nearly always null
+Orders	ParticipationScope	participation_scope	participation_scope	f	number(28,14)	1	
+Orders	Notional	notional	notional	f	number(28,6)	1	
+Orders	OrderADV30	order_adv_30	order_adv_30	f	number(28,14)	1	
+Orders	NavMTVOverall	nav_mtv_overall	nav_mtv_overall	f	number(28,14)	1	
+Orders	NavMTVCurrentSegment	nav_mtv_current_segment	nav_mtv_current_segment	f	number(28,14)	1	
+Orders	NavPOVOverall	nav_pov_overall	nav_pov_overall	f	number(28,14)	1	
+Orders	NavPOVCurrentSegment	nav_pov_current_segment	nav_pov_current_segment	f	number(28,14)	1	
+Orders	Leaves	leaves	leaves	f	number(18,2)	1	Possible float with 2 decimals?
+Orders	PercentComplete	percent_complete	percent_complete	f	number(28,14)	1	
+Orders	ClosingAuctionOrderPerc	closing_auction_order_perc	closing_auction_order_perc	f	number(28,14)	1	
+Orders	RelativeLimitSpreadEOD	relative_limit_spread_eod	relative_limit_spread_eod	f	number(28,10)	1	
+Orders	RelativeLimitInOutEOD	relative_limit_in_out_eod	relative_limit_in_out_eod	s	varchar(20)	1	IN/OUT when defined, nearly always null
+Orders	ParticipationScopeEOD	participation_scope_eod	participation_scope_eod	f	number(28,14)	1	
+Orders	SSR	ssr	ssrflag	s	varchar(16777216)	1	Yes/No
+Orders	IsStockHalted	is_stock_halted	is_stock_halted	s	boolean	1	True/False
+Orders	SymbolPNC	symbol_pnc	symbol_pnc	f	number(18,6)	1	
+Orders	OutOfLimitOrVolCapped	out_of_limit_or_vol_capped	out_of_limit_or_vol_capped	*	varchar(100)	1	Example: 'IN, -2.50' or 'MID, 51.55'
+Orders	NavAlgoStyle	nav_algo_style	nav_algo_style	s	varchar(50)	1	
+Orders	SecurityRemainingIntradayVolume	security_remaining_intraday_volume	security_remaining_intraday_volume	j	number(38,0)	1	
+Orders	ClosingAuctionTargetRate	closing_auction_target_rate	closing_auction_target_rate	f	number(28,14)	1	
+Orders	ClosingAuctionQuantity	closing_auction_quantity	closing_auction_quantity	j	number(38,0)	1	
+Orders	RelLimit	rel_limit	rel_limit	f	number(28,14)	1	
+Orders	RelLimitType	rel_limit_type	rel_limit_type	s	varchar(50)	1	Arrival, PNC for less than .001%, else not supplied
+Orders	RelLimitIndex	rel_limit_index	rel_limit_index	s	varchar(50)	1	MXUS, PCEF US, PSEF US for less than .001%, else not supplied
+Orders	EndTimeByRate	end_time_by_rate	end_time_by_rate	f	number(28,14)	1	
+Orders	ScaledTargetRate	scaled_target_rate	scaled_target_rate	f	number(28,14)	1	
+Orders	CustomInstr	custom_instr	custom_instr	s	varchar(100)	1	
+Orders	ScheduleTilt	schedule_tilt	schedule_tilt	s	varchar(50)	1	Backload, Frontload, Normal, Strict for a handful of cases, else blank
+Orders	PreMarket	pre_market	pre_market	s	boolean	1	True/False
+Orders	Rule10b18	rule_10b18	rule_10b18	s	boolean	1	True/False
+Orders	DynamicPullback	dynamic_pull_back	dynamic_pull_back	*	varchar(50)	1	(no values supplied)
+Orders	NoSDP	no_sdp	no_sdp	s	boolean	1	True/False
+Orders	NoPrincipal	no_principal	no_principal	s	boolean	1	True/False
+Orders	NoTCross	no_tcross	no_tcross	s	boolean	1	True/False
+Orders	NoExchanges	no_exchanges	no_exchanges	s	boolean	1	True/False
+Orders	VenueBlacklist	venue_black_list	venue_black_list	*	varchar(400)	1	no values
+Orders	ShowHT	show_ht	show_ht	s	boolean	1	True/False
+Orders	InstrHT	instr_ht	instr_ht	s	varchar(100)	1	10000, FFS, HTINST, TEST, TEST1
+Orders	AlgoInfoAB	algo_info_ab	algo_info_ab	*	varchar(400)	1	no values
+Orders	MustComplete	must_complete	must_complete	s	boolean	1	True/False
+Orders	AlgoStyle	algo_style	algo_style	s	varchar(50)	1	
+Orders	AlgoInfoRouteType	algo_info_route_type	algo_info_route_type	s	varchar(100)	1	
+Orders	PriceTriggerCommitPercent			*		1	(no longer in use)
+Orders	PriceTriggerRouteType			*		1	(no longer in use)
