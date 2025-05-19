@@ -9,14 +9,14 @@ arg:((`main;      0b;                                          (); "set true for
      (`getmode;  `aws;                               (`aws`sftp);  "get trade files via aws or sftp");
      (`put;       0b;                                          (); "set put true to update the database");
      (`tasks;      8;                                          (); "number of worker tasks to use to parse files");
-     (`db;        .sys.q`alg`db;                               (); "database directory");
+     (`db;        .sys.q`alg1`db;                              (); "database directory");
      (`source;    .sys.q`alg`source;                           (); "directory with source files");
      (`tmp;       .sys.tmp[];                                  (); "temporary staging area");
-     (`config;    .sys.q`alg`config;                           (); "dir with configuration files"));
+     (`config;    .sys.q`alg1`config;                          (); "dir with configuration files"));
 
-x:.sys.arg[arg;"Trading system - file loader";""]
+x:.sys.arg[arg;"OMS file loader -- old version";""]
 
-prefix:`alg                                               /prefix used for database objects
+prefix:`alg1                                              /prefix used for database objects
 objname:{` sv prefix,x}                                   /creates database object name from prefix
 symname:objname`sym                                       /enumeration vector name
 enum:{.Q.ens[x;y;symname]}                                /enumeration function given dir & table
